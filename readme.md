@@ -1,0 +1,1 @@
+# react native apllication with amplify
