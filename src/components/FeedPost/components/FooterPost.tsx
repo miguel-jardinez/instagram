@@ -17,17 +17,21 @@ interface FooterPostProps {
   isSaved: boolean;
   username: string;
   likes: number;
-  comment: Comment;
+  comments: Comment[];
   postContent: string;
+  totalComments: number;
+  date: string;
 }
 
 const FooterPost: FC<FooterPostProps> = ({
-  comment,
+  comments,
   isLiked,
   isSaved,
   likes,
   username,
   postContent,
+  totalComments,
+  date,
 }) => {
   const [like, setLike] = useState<boolean>(isLiked);
   const [save, setSave] = useState<boolean>(isSaved);
@@ -75,7 +79,7 @@ const FooterPost: FC<FooterPostProps> = ({
         <Text style={mainTheme.textBold}>{likes} others</Text>
       </Text>
       <PostDescription postContent={postContent} username={username} />
-      <Comments comment={comment} />
+      <Comments date={date} totalComments={totalComments} comments={comments} />
     </Container>
   );
 };

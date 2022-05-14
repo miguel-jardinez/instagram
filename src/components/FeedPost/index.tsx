@@ -5,40 +5,47 @@ import HeaderPost from './components/HeaderPost';
 import {styles} from './Post.styles';
 
 export interface Comment {
+  id: string;
   username: string;
   isLiked: boolean;
   commentContent: string;
   date: string;
-  totalComments: number;
 }
 
-export interface FeedPost {
+export interface FeedPostInterface {
   img: string;
-  username: string;
-  avatar: string;
+  user: {
+    username: string;
+    avatar: string;
+  };
   postcontent: string;
   likes: number;
   isLiked: boolean;
-  comment: Comment;
+  comments: Comment[];
   isSaved: boolean;
+  id: string;
+  totalComments: number;
+  date: string;
 }
 
 interface FeedPostProps {
-  post: FeedPost;
+  post: FeedPostInterface;
 }
 
 const FeedPost: FC<FeedPostProps> = ({post}) => {
   return (
     <View style={styles.post}>
-      <HeaderPost avatar={post.avatar} username={post.username} />
+      <HeaderPost avatar={post.user.avatar} username={post.user.username} />
       {/* Content */}
       <Image source={{uri: post.img}} style={styles.image} />
       <FooterPost
+        date={post.date}
         isLiked={post.isLiked}
         isSaved={post.isSaved}
-        username={post.username}
+        username={post.user.username}
         likes={post.likes}
-        comment={post.comment}
+        comments={post.comments}
+        totalComments={post.totalComments}
         postContent={post.postcontent}
       />
     </View>

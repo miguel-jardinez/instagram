@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import colors from '../../themes/colors';
-import {weight} from '../../themes/fonts';
+import {fonts, weight} from '../../themes/fonts';
 
 export const styles = StyleSheet.create({
   post: {},
@@ -39,5 +39,13 @@ export const styles = StyleSheet.create({
   comments: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  likesText: {
+    color: colors.grey,
+  },
+  dateText: {
+    marginTop: 6,
+    color: colors.grey,
+    fontSize: fonts.xs,
   },
 });

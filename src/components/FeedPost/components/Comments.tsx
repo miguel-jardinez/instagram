@@ -1,43 +1,24 @@
-import React, {useState, FC} from 'react';
-import {View, Text} from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Comment} from '..';
-import colors from '../../../themes/colors';
+import React, {FC} from 'react';
+import {Text} from 'react-native';
+import {Comment as CommentType} from '..';
 import {mainTheme} from '../../../themes/globalTheme';
 import {styles} from '../Post.styles';
+import Comment from './Comment';
 
 interface CommentsProps {
-  comment: Comment;
+  comments: CommentType[];
+  totalComments: number;
+  date: string;
 }
 
-const Comments: FC<CommentsProps> = ({comment}) => {
-  const {commentContent, date, isLiked, totalComments, username} = comment;
-  const [like, setLike] = useState<boolean>(isLiked);
-
-  const handleLikePost = () => {
-    setLike(!like);
-  };
-
+const Comments: FC<CommentsProps> = ({totalComments, comments, date}) => {
   return (
     <>
-      <Text style={mainTheme.marginTop1}>
+      <Text style={[mainTheme.marginTop1, styles.likesText]}>
         View all {totalComments} comments
       </Text>
-      <View>
-        <View style={styles.comments}>
-          <Text style={[mainTheme.marginTop, mainTheme.flex1]}>
-            <Text style={mainTheme.textBold}>{username} </Text>
-            {commentContent}
-          </Text>
-          <AntDesign
-            name={like ? 'heart' : 'hearto'}
-            style={styles.icon}
-            color={colors.black}
-            onPress={handleLikePost}
-          />
-        </View>
-        <Text style={mainTheme.marginTop}>{date}</Text>
-      </View>
+      <Comment comment={comments[0]} />
+      <Text style={styles.dateText}>{date}</Text>
     </>
   );
 };
