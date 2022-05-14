@@ -1,13 +1,15 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import {ScrollView} from 'react-native';
+import {FeedPost} from './src/components';
+import {feedPost} from './src/utils/mockPost';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Hola mundo</Text>
-      <AntDesign name="leftcircle" />
-    </SafeAreaView>
+    <ScrollView>
+      {feedPost.map(post => (
+        <FeedPost post={post} />
+      ))}
+    </ScrollView>
   );
 };
 
