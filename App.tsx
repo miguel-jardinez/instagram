@@ -1,12 +1,11 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {FeedList} from './src/components';
-import {feedPost} from './src/utils/mockPost';
+import {HomePage} from './src/screens';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <FeedList post={feedPost} />
+      <HomePage />
     </SafeAreaView>
   );
 };
