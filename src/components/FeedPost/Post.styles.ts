@@ -48,4 +48,7 @@ export const styles = StyleSheet.create({
     color: colors.grey,
     fontSize: fonts.xs,
   },
+  showMore: {
+    color: colors.grey,
+  },
 });

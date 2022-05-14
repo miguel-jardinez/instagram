@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {View, Image} from 'react-native';
+import {View} from 'react-native';
 import FooterPost from './components/FooterPost';
 import HeaderPost from './components/HeaderPost';
 import {styles} from './Post.styles';
@@ -36,9 +36,8 @@ const FeedPost: FC<FeedPostProps> = ({post}) => {
   return (
     <View style={styles.post}>
       <HeaderPost avatar={post.user.avatar} username={post.user.username} />
-      {/* Content */}
-      <Image source={{uri: post.img}} style={styles.image} />
       <FooterPost
+        img={post.img}
         date={post.date}
         isLiked={post.isLiked}
         isSaved={post.isSaved}

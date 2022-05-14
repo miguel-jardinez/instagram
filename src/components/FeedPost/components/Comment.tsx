@@ -26,7 +26,7 @@ const Comment: FC<CommentProps> = ({comment}) => {
         <AntDesign
           name={like ? 'heart' : 'hearto'}
           style={styles.icon}
-          color={colors.black}
+          color={like ? colors.accent : colors.black}
           onPress={handleLikePost}
         />
       </View>

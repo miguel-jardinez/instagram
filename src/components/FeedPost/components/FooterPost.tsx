@@ -1,5 +1,5 @@
 import React, {useState, FC} from 'react';
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
@@ -21,6 +21,7 @@ interface FooterPostProps {
   postContent: string;
   totalComments: number;
   date: string;
+  img: string;
 }
 
 const FooterPost: FC<FooterPostProps> = ({
@@ -32,6 +33,7 @@ const FooterPost: FC<FooterPostProps> = ({
   postContent,
   totalComments,
   date,
+  img,
 }) => {
   const [like, setLike] = useState<boolean>(isLiked);
   const [save, setSave] = useState<boolean>(isSaved);
@@ -45,42 +47,49 @@ const FooterPost: FC<FooterPostProps> = ({
   };
 
   return (
-    <Container>
-      <View style={styles.iconContainer}>
-        <AntDesign
-          name={like ? 'heart' : 'hearto'}
-          size={24}
-          style={styles.icon}
-          color={colors.black}
-          onPress={handleLikePost}
+    <>
+      <Image source={{uri: img}} style={styles.image} />
+      <Container>
+        <View style={styles.iconContainer}>
+          <AntDesign
+            name={like ? 'heart' : 'hearto'}
+            size={24}
+            style={styles.icon}
+            color={like ? colors.accent : colors.black}
+            onPress={handleLikePost}
+          />
+          <Ionicons
+            name="chatbubble-outline"
+            size={24}
+            style={styles.icon}
+            color={colors.black}
+          />
+          <Feather
+            name="send"
+            size={24}
+            style={styles.icon}
+            color={colors.black}
+          />
+          <FontAwesome
+            name={save ? 'bookmark' : 'bookmark-o'}
+            onPress={handleSavePost}
+            size={24}
+            style={styles.saveIcon}
+            color={colors.black}
+          />
+        </View>
+        <Text>
+          Liked by <Text style={mainTheme.textBold}>{username}</Text> and{' '}
+          <Text style={mainTheme.textBold}>{likes} others</Text>
+        </Text>
+        <PostDescription postContent={postContent} username={username} />
+        <Comments
+          date={date}
+          totalComments={totalComments}
+          comments={comments}
         />
-        <Ionicons
-          name="chatbubble-outline"
-          size={24}
-          style={styles.icon}
-          color={colors.black}
-        />
-        <Feather
-          name="send"
-          size={24}
-          style={styles.icon}
-          color={colors.black}
-        />
-        <FontAwesome
-          name={save ? 'bookmark' : 'bookmark-o'}
-          onPress={handleSavePost}
-          size={24}
-          style={styles.saveIcon}
-          color={colors.black}
-        />
-      </View>
-      <Text>
-        Liked by <Text style={mainTheme.textBold}>{username}</Text> and{' '}
-        <Text style={mainTheme.textBold}>{likes} others</Text>
-      </Text>
-      <PostDescription postContent={postContent} username={username} />
-      <Comments date={date} totalComments={totalComments} comments={comments} />
-    </Container>
+      </Container>
+    </>
   );
 };
 
