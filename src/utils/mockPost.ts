@@ -44,7 +44,11 @@ export const feedPost: FeedPostInterface[] = [
       },
     ],
     totalComments: 16,
-    img: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/980px/public/media/image/2019/08/5-mejores-peliculas-animacion-dreamworks.jpg?itok=koswYY4V',
+    images: [
+      'https://fotoarte.com.uy/wp-content/uploads/2019/03/Landscape-fotoarte.jpg',
+      'https://thelandscapephotoguy.com/wp-content/uploads/2019/01/landscape%20new%20zealand%20S-shape.jpg',
+      'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/980px/public/media/image/2019/08/5-mejores-peliculas-animacion-dreamworks.jpg?itok=koswYY4V',
+    ],
     isLiked: true,
     isSaved: false,
     likes: 16,
@@ -69,7 +73,8 @@ export const feedPost: FeedPostInterface[] = [
         username: 'perla_gonzalez',
       },
     ],
-    img: 'https://i.pinimg.com/originals/06/f1/54/06f154f2cc0ddcac82fada9939891d8f.png',
+    image:
+      'https://i.pinimg.com/originals/06/f1/54/06f154f2cc0ddcac82fada9939891d8f.png',
     isLiked: false,
     isSaved: true,
     likes: 16,
