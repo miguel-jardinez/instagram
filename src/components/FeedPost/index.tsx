@@ -33,17 +33,18 @@ export interface FeedPostInterface {
 }
 
 interface FeedPostProps {
+  isVisible: boolean;
   post: FeedPostInterface;
 }
 
-const FeedPost: FC<FeedPostProps> = ({post}) => {
+const FeedPost: FC<FeedPostProps> = ({post, isVisible}) => {
   return (
     <View style={styles.post}>
       <HeaderPost avatar={post.user.avatar} username={post.user.username} />
       {!post.video ? (
         <ImageContainer image={post?.image} images={post?.images} />
       ) : (
-        <VideoContainer video={post.video} />
+        <VideoContainer isVisible={isVisible} video={post.video} />
       )}
       <FooterPost
         image={post.image}

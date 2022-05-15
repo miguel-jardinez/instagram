@@ -7,9 +7,10 @@ import {styles} from './VideoContainer.styled';
 
 interface VideoContainerProps {
   video: string;
+  isVisible: boolean;
 }
 
-const VideoContainer: FC<VideoContainerProps> = ({video}) => {
+const VideoContainer: FC<VideoContainerProps> = ({video, isVisible}) => {
   const [isMuted, setIsMuted] = useState<boolean>(true);
 
   const handleMuted = () => {
@@ -24,6 +25,7 @@ const VideoContainer: FC<VideoContainerProps> = ({video}) => {
         source={{uri: video}}
         repeat
         muted={isMuted}
+        paused={!isVisible}
       />
       <Pressable onPress={handleMuted} style={styles.mutedButton}>
         <IonIcon
