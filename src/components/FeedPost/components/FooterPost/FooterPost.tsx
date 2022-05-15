@@ -4,13 +4,13 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Comment} from '..';
-import colors from '../../../themes/colors';
-import {mainTheme} from '../../../themes/globalTheme';
-import Container from '../../Container';
-import {styles} from '../Post.styles';
-import Comments from './Comments';
-import PostDescription from './PostDescription';
+import {Comment} from '../..';
+import colors from '../../../../themes/colors';
+import {mainTheme} from '../../../../themes/globalTheme';
+import Container from '../../../Container';
+import Comments from '../comments/Comments';
+import PostDescription from '../PostDescription/PostDescription';
+import {styles} from './FooterPost.styles';
 
 interface FooterPostProps {
   isLiked: boolean;

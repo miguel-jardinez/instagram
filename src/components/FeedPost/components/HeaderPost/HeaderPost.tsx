@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {View, Image, Text} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-import {styles} from '../Post.styles';
+import {styles} from './HeaderPost.styles';
 
 interface HeaderPostProps {
   avatar: string;

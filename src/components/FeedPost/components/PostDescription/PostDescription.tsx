@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react';
 import {Text, View} from 'react-native';
-import {mainTheme} from '../../../themes/globalTheme';
-import {styles} from '../Post.styles';
+import {mainTheme} from '../../../../themes/globalTheme';
+import {styles} from './PostDescription.styles';
 
 interface PostDescriptionProps {
   postContent: string;

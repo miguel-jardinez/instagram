@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import {View} from 'react-native';
-import FooterPost from './components/FooterPost';
-import HeaderPost from './components/HeaderPost';
-import ImageContainer from './components/ImageContainer';
+import FooterPost from './components/FooterPost/FooterPost';
+import HeaderPost from './components/HeaderPost/HeaderPost';
+import ImageContainer from './components/ImageContainer/ImageContainer';
+import VideoContainer from './components/VideoContainer/VideoContainer';
 import {styles} from './Post.styles';
 
 export interface Comment {
@@ -16,6 +17,7 @@ export interface Comment {
 export interface FeedPostInterface {
   image?: string;
   images?: string[];
+  video?: string;
   user: {
     username: string;
     avatar: string;
@@ -38,7 +40,11 @@ const FeedPost: FC<FeedPostProps> = ({post}) => {
   return (
     <View style={styles.post}>
       <HeaderPost avatar={post.user.avatar} username={post.user.username} />
-      <ImageContainer image={post?.image} images={post?.images} />
+      {!post.video ? (
+        <ImageContainer image={post?.image} images={post?.images} />
+      ) : (
+        <VideoContainer video={post.video} />
+      )}
       <FooterPost
         image={post.image}
         images={post.images}

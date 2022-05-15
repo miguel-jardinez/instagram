@@ -1,10 +1,10 @@
 import React, {FC, useState} from 'react';
 import {View, Text} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import colors from '../../../themes/colors';
-import {mainTheme} from '../../../themes/globalTheme';
-import {styles} from '../Post.styles';
-import {Comment as CommentType} from '..';
+import colors from '../../../../themes/colors';
+import {mainTheme} from '../../../../themes/globalTheme';
+import {Comment as CommentType} from '../..';
+import {styles} from './Comment.styles';
 
 interface CommentProps {
   comment: CommentType;

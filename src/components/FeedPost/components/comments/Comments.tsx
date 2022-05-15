@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import {Text} from 'react-native';
-import {Comment as CommentType} from '..';
-import {mainTheme} from '../../../themes/globalTheme';
-import {styles} from '../Post.styles';
-import Comment from './Comment';
+import {Comment as CommentType} from '../..';
+import {mainTheme} from '../../../../themes/globalTheme';
+import Comment from '../Comment/Comment';
+import {styles} from './Comments.styles';
 
 interface CommentsProps {
   comments: CommentType[];

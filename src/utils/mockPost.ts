@@ -2,6 +2,49 @@ import {FeedPostInterface} from '../components/FeedPost';
 
 export const feedPost: FeedPostInterface[] = [
   {
+    id: '786rfg7y8huiojnbutr57687hj897b',
+    date: '14 May, 2022',
+    user: {
+      username: '_perlagonzales',
+      avatar:
+        'https://i0.wp.com/hipertextual.com/wp-content/uploads/2020/09/hipertextual-avatar-2-logra-concluir-su-rodaje-pese-covid-19-2020475848.jpg',
+    },
+    comments: [
+      {
+        id: '87675645968798',
+        commentContent:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+        date: '',
+        isLiked: false,
+        username: 'perla_gonzalez',
+      },
+      {
+        id: 'kjhbtf57687h787vtr5d',
+        commentContent:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+        date: '19 December, 2021',
+        isLiked: true,
+        username: 'perla_gonzalez',
+      },
+      {
+        id: '976t76gybijgvruytgiy',
+        commentContent:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+        date: '',
+        isLiked: false,
+        username: 'perla_gonzalez',
+      },
+    ],
+    totalComments: 4,
+    video:
+      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    isLiked: false,
+    isSaved: false,
+    likes: 4,
+    postcontent:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
+  },
+  {
     id: 'ñkljbvcd567687oh8jimlnjkhbjgv',
     date: '19 December, 2021',
     user: {

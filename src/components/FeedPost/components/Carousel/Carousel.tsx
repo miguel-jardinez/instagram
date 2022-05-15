@@ -7,8 +7,8 @@ import {
   ViewabilityConfig,
   ViewToken,
 } from 'react-native';
-import colors from '../../../themes/colors';
-import {styles} from '../Post.styles';
+import colors from '../../../../themes/colors';
+import {styles} from './Caroulse.styles';
 
 interface CarouselProps {
   images: string[];
@@ -61,6 +61,7 @@ const Carousel: FC<CarouselProps> = ({images}) => {
       <View style={styles.dotContainer}>
         {images.map((_, index) => (
           <View
+            key={index}
             style={[
               styles.dots,
               {
