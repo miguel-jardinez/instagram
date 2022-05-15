@@ -40,7 +40,15 @@ const Carousel: FC<CarouselProps> = ({images}) => {
       <FlatList
         keyExtractor={item => item}
         renderItem={({item}) => (
-          <Image style={{width, aspectRatio: 1}} source={{uri: item}} />
+          <Image
+            style={[
+              styles.imageCaroulse,
+              {
+                width,
+              },
+            ]}
+            source={{uri: item}}
+          />
         )}
         data={images}
         horizontal

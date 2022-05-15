@@ -69,4 +69,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
     width: '100%',
   },
+  imageCaroulse: {
+    aspectRatio: 1,
+  },
 });
