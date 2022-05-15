@@ -8,8 +8,8 @@ import {Comment} from '../..';
 import colors from '../../../../themes/colors';
 import {mainTheme} from '../../../../themes/globalTheme';
 import Container from '../../../Container';
-import Comments from '../comments/Comments';
-import PostDescription from '../PostDescription/PostDescription';
+import Comments from '../comments';
+import PostDescription from '../PostDescription';
 import {styles} from './FooterPost.styles';
 
 interface FooterPostProps {

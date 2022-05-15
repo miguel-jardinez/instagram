@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Image} from 'react-native';
-import Carousel from '../Carousel/Carousel';
+import Carousel from '../Carousel';
 import {styles} from './ImageContainer.styles';
 
 interface ImageContainer {

@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import {View} from 'react-native';
-import FooterPost from './components/FooterPost/FooterPost';
-import HeaderPost from './components/HeaderPost/HeaderPost';
-import ImageContainer from './components/ImageContainer/ImageContainer';
-import VideoContainer from './components/VideoContainer/VideoContainer';
+import FooterPost from './components/FooterPost';
+import HeaderPost from './components/HeaderPost';
+import ImageContainer from './components/ImageContainer';
+import VideoContainer from './components/VideoContainer';
 import {styles} from './Post.styles';
 
 export interface Comment {
