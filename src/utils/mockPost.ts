@@ -11,28 +11,40 @@ export const feedPost: FeedPostInterface[] = [
     },
     comments: [
       {
-        id: '87675645968798',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '',
         isLiked: false,
-        username: 'perla_gonzalez',
       },
       {
-        id: 'kjhbtf57687h787vtr5d',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '19 December, 2021',
         isLiked: true,
-        username: 'perla_gonzalez',
       },
       {
-        id: '976t76gybijgvruytgiy',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '',
         isLiked: false,
-        username: 'perla_gonzalez',
       },
     ],
     totalComments: 4,
@@ -54,36 +66,40 @@ export const feedPost: FeedPostInterface[] = [
     },
     comments: [
       {
-        id: 'jbhcrd4565f76g87h9',
-        commentContent:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
-        date: '19 December, 2021',
-        isLiked: false,
-        username: 'perla_gonzalez',
-      },
-      {
-        id: '87675645968798',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '',
         isLiked: false,
-        username: 'perla_gonzalez',
       },
       {
-        id: 'kjhbtf57687h787vtr5d',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '19 December, 2021',
         isLiked: true,
-        username: 'perla_gonzalez',
       },
       {
-        id: '976t76gybijgvruytgiy',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '',
         isLiked: false,
-        username: 'perla_gonzalez',
       },
     ],
     totalComments: 16,
@@ -108,12 +124,40 @@ export const feedPost: FeedPostInterface[] = [
     },
     comments: [
       {
-        id: 'jbhcrd4565f76g87h9',
-        commentContent:
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
         date: '',
         isLiked: false,
-        username: 'perla_gonzalez',
+      },
+      {
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+        date: '19 December, 2021',
+        isLiked: true,
+      },
+      {
+        user: {
+          id: 'u1',
+          image:
+            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
+          username: 'vadimnotjustdev',
+        },
+        comment:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+        date: '',
+        isLiked: false,
       },
     ],
     image:

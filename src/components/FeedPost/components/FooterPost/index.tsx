@@ -4,7 +4,6 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Comment} from '../..';
 import colors from '../../../../themes/colors';
 import {mainTheme} from '../../../../themes/globalTheme';
 import Container from '../../../Container';
@@ -17,7 +16,6 @@ interface FooterPostProps {
   isSaved: boolean;
   username: string;
   likes: number;
-  comments: Comment[];
   postContent: string;
   totalComments: number;
   date: string;
@@ -26,7 +24,6 @@ interface FooterPostProps {
 }
 
 const FooterPost: FC<FooterPostProps> = ({
-  comments,
   isLiked,
   isSaved,
   likes,
@@ -81,7 +78,7 @@ const FooterPost: FC<FooterPostProps> = ({
         <Text style={mainTheme.textBold}>{likes} others</Text>
       </Text>
       <PostDescription postContent={postContent} username={username} />
-      <Comments date={date} totalComments={totalComments} comments={comments} />
+      <Comments date={date} totalComments={totalComments} />
     </Container>
   );
 };

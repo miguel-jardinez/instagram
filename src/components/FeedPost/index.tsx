@@ -7,10 +7,13 @@ import VideoContainer from './components/VideoContainer';
 import {styles} from './Post.styles';
 
 export interface Comment {
-  id: string;
-  username: string;
+  user: {
+    id: string;
+    image: string;
+    username: string;
+  };
   isLiked: boolean;
-  commentContent: string;
+  comment: string;
   date: string;
 }
 
@@ -25,7 +28,6 @@ export interface FeedPostInterface {
   postcontent: string;
   likes: number;
   isLiked: boolean;
-  comments: Comment[];
   isSaved: boolean;
   id: string;
   totalComments: number;
@@ -54,7 +56,6 @@ const FeedPost: FC<FeedPostProps> = ({post, isVisible}) => {
         isSaved={post.isSaved}
         username={post.user.username}
         likes={post.likes}
-        comments={post.comments}
         totalComments={post.totalComments}
         postContent={post.postcontent}
       />

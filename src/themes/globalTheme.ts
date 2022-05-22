@@ -12,4 +12,9 @@ export const mainTheme = StyleSheet.create({
   },
   ...margins,
   ...alignment,
+  avatar: {
+    height: 35,
+    width: 35,
+    borderRadius: 50,
+  },
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {HomePage} from './src/screens';
+import {CommentPage} from './src/screens';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <HomePage />
+      <CommentPage />
     </SafeAreaView>
   );
 };
