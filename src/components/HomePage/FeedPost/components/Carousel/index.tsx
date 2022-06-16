@@ -7,7 +7,7 @@ import {
   ViewabilityConfig,
   ViewToken,
 } from 'react-native';
-import colors from '../../../../themes/colors';
+import colors from '../../../../../themes/colors';
 import {styles} from './Caroulse.styles';
 
 interface CarouselProps {

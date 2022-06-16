@@ -1,4 +1,4 @@
-import {FeedPostInterface} from '../components/FeedPost';
+import {FeedPostInterface} from '../components/HomePage/FeedPost';
 
 export const feedPost: FeedPostInterface[] = [
   {

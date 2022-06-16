@@ -1,7 +1,7 @@
 import React, {FC, useRef, useState} from 'react';
 import {FlatList, ViewabilityConfig, ViewToken} from 'react-native';
 import {FeedPostInterface} from '../FeedPost';
-import {FeedPost} from '..';
+import {FeedPost} from '../../index';
 
 interface FeedList {
   post: FeedPostInterface[];

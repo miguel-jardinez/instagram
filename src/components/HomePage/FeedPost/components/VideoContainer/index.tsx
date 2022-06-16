@@ -2,7 +2,7 @@ import React, {FC, useState} from 'react';
 import {View, Pressable} from 'react-native';
 import Video from 'react-native-video';
 import IonIcon from 'react-native-vector-icons/Ionicons';
-import colors from '../../../../themes/colors';
+import colors from '../../../../../themes/colors';
 import {styles} from './VideoContainer.styled';
 
 interface VideoContainerProps {

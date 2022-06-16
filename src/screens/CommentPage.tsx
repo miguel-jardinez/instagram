@@ -9,8 +9,9 @@ const CommentPage = () => {
     <Container size={'md'}>
       <FlatList
         data={comments}
-        renderItem={({item}) => <Comment isPage={true} comment={item} />}
+        renderItem={({item}) => <Comment comment={item} />}
       />
+
     </Container>
   );
 };

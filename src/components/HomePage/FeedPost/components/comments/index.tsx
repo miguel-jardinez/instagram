@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Text} from 'react-native';
-import {mainTheme} from '../../../../themes/globalTheme';
+import {mainTheme} from '../../../../../themes/globalTheme';
 import {styles} from './Comments.styles';
 
 interface CommentsProps {

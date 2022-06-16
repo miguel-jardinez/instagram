@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import colors from '../../../../themes/colors';
-import {weight} from '../../../../themes/fonts';
+import colors from '../../../../../themes/colors';
+import {weight} from '../../../../../themes/fonts';
 
 export const styles = StyleSheet.create({
   header: {
